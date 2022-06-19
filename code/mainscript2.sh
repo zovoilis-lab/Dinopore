@@ -3,7 +3,7 @@ set -e
 
 # This is the master script for the capsule. When you click "Reproducible Run", the code in this file will execute.
 
-codedir="/home/s190075/dinoporegit/code"
+codedir="/code"
 
 export SAM2TSV="java -jar ${codedir}/misc/sam2tsv.jar"
 export PICARD="java -jar ${codedir}/misc/picard.jar"
