@@ -24,9 +24,11 @@ else
 fi
 
 #Step 2 - Run sam2tsv and process tsv file
+echo "S2 Sam2tsv"
 sh ${codedir}/s2.Sam2tsv_processtsv.sh $fqdir $expt $exptdir $ref $numcore
 
 #Part 2 - process raw nanopolish file
+echo "S2 Nanopolish"
 sh ${codedir}/s2.Combine_raw_nnpl.sh $npdir $expt $exptdir $numcore
 
 echo -e S2 End: $(date) "\n"

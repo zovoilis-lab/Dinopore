@@ -33,10 +33,10 @@ mkdir -p $fqdir $npdir
 #guppy_basecaller -i $fast5dir -s $fqdir --flowcell $flowcell --kit $kit --cpu_threads_per_caller 12 -r
 
 #Step 2 - Concatenate all fastq files into one main fastq file "*.combined.fastq".
-cd $fqdir
+#cd $fqdir
 #rm $fqCombined
-#cat *.fastq > $fqCombined
-#echo All fastq have been combined.
+cat *.fastq > $fqCombined
+echo All fastq have been combined.
 
 if [ "$delfastq" = "y" ]; then
  find . -maxdepth 1 -type f -name '*.fastq' -a ! -name '*.combined.fastq' -delete
